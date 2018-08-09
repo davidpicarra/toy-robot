@@ -6,10 +6,13 @@
 > A Vue.js project to solve the Toy Robot challenge
 
 ## Table of Contents
-
+- [Demo](#demo)
 - [What was done](#what-was-done)
 - [How to run the app](#how-to-run-the-app)
 - [Build setup](#build-setup)
+
+## Demo
+[__Demo__](https://davidpicarra.github.io/toy-robot/dist/)
 
 ## What was done
 
