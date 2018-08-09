@@ -16,12 +16,20 @@ module.exports = {
   },
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   setupFiles: ['<rootDir>/test/unit/setup'],
-  mapCoverage: true,
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js',
     '!src/router/index.js',
     '!**/node_modules/**'
-  ]
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
+    }
+  },
+  testURL: 'http://localhost/'
 }
