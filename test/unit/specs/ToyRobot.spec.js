@@ -452,6 +452,7 @@ describe('ToyRobot.vue', () => {
           })
           wrapper.vm.sendCommand()
           expect(wrapper.vm.addMessage).toBeCalledWith('Executed command: help()', 'is-success')
+          expect(wrapper.vm.command).toEqual('')
         })
         it('should show invalid input if it doesnt match a function input like', () => {
           wrapper.setData({
@@ -459,6 +460,7 @@ describe('ToyRobot.vue', () => {
           })
           wrapper.vm.sendCommand()
           expect(wrapper.vm.addMessage).toBeCalledWith('Invalid input, try: help()', 'is-danger')
+          expect(wrapper.vm.command).toEqual('')
         })
         it('should show invalid command if command is function but not within this.validFunctions', () => {
           wrapper.setData({
@@ -466,6 +468,7 @@ describe('ToyRobot.vue', () => {
           })
           wrapper.vm.sendCommand()
           expect(wrapper.vm.addMessage).toBeCalledWith('Invalid command: test()', 'is-danger')
+          expect(wrapper.vm.command).toEqual('')
         })
         it('should show invalid command if command if exception thrown when calling valid function', () => {
           wrapper.vm.help = jest.fn()
@@ -477,6 +480,7 @@ describe('ToyRobot.vue', () => {
           })
           wrapper.vm.sendCommand()
           expect(wrapper.vm.addMessage).toBeCalledWith('Invalid command: help() (foobar)', 'is-warning')
+          expect(wrapper.vm.command).toEqual('')
         })
       })
     })

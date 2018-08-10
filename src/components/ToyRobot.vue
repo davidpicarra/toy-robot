@@ -73,6 +73,7 @@ export default {
       } else {
         this.addMessage(`Invalid input, try: help()`, 'is-danger')
       }
+      this.command = ''
     },
     place (x, y, facing) {
       this.robot.x = x
@@ -146,7 +147,7 @@ export default {
     help () {
       this.addMessage(`Following commands are available:
       > help() - shows available commands
-      > place(x, y, facing) - place the robot at x, y location and facing the direction provided
+      > place(x, y, facing) - place the robot at x, y location and facing the direction provided. Facing valid values are: NORTH, EAST, SOUTH, WEST
       > move() - moves the robot 1 unit forward in the direction it's facing
       > left() - rotate left 90 degrees anti-clockwise
       > right() - rotate right 90 degrees clockwise

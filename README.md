@@ -28,6 +28,9 @@ report() // outputs current robots location and direction
 clear() // clear the messages
 ```
 
+Created unit test with 100% coverage and added specific test to try the scenario provided:
+> [should execute the sample test correctly](https://github.com/davidpicarra/toy-robot/blob/master/test/unit/specs/ToyRobot.spec.js#L47)
+
 ## How to run the app
 
 In order to run the app locally, the following commands must be executed:
